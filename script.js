@@ -1,0 +1,12 @@
+const button = document.querySelector(".menu");
+const links = document.querySelector(".nav-links");
+
+button.addEventListener("click", () => {
+  const open = links.classList.toggle("open");
+  button.setAttribute("aria-expanded", String(open));
+});
+
+links.addEventListener("click", () => {
+  links.classList.remove("open");
+  button.setAttribute("aria-expanded", "false");
+});
